@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Button, Col, Row, Form, ListGroup } from "react-bootstrap";
 
 const Contact = (event) => {
-  const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-
-    setValidated(true);
-  };
   return (
     <motion.div
       className="contact"
@@ -25,7 +19,7 @@ const Contact = (event) => {
       <Row>
         <Col>
           <div className="contact-form">
-            <Form noValidate validated={validated} onSubmit={handleSubmit} method="POST" data-netlify="true">
+            <Form onSubmit={handleSubmit} method="POST" data-netlify="true">
               <Form.Group className="mb-3" controlId="validationCustom01">
                 <Form.Label>Name</Form.Label>
                 <Form.Control name="name" required type="text" placeholder="Name" />
