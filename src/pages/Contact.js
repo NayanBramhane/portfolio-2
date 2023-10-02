@@ -28,15 +28,15 @@ const Contact = (event) => {
             <Form noValidate validated={validated} onSubmit={handleSubmit} method="POST" data-netlify="true">
               <Form.Group className="mb-3" controlId="validationCustom01">
                 <Form.Label>Name</Form.Label>
-                <Form.Control required type="text" placeholder="Name" />
+                <Form.Control name="name" required type="text" placeholder="Name" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="validationCustom02">
                 <Form.Label>Email</Form.Label>
-                <Form.Control required type="email" placeholder="Email" />
+                <Form.Control name="email" required type="email" placeholder="Email" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="validationCustom03">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" required placeholder="Message" />
+                <Form.Control name="message" as="textarea" required placeholder="Message" />
               </Form.Group>
               <Button type="submit">Submit form</Button>
             </Form>
