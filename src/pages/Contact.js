@@ -7,6 +7,7 @@ const Contact = (event) => {
   const handleSubmit = (event) => {
       event.preventDefault();
       event.stopPropagation();
+      alert("Please contact me on LinkedIn.\nJust copy paste the message in LinkedIn :)");
     }
   return (
     <motion.div
@@ -19,7 +20,7 @@ const Contact = (event) => {
       <Row>
         <Col>
           <div className="contact-form">
-            <Form onSubmit={handleSubmit} method="POST" data-netlify="true">
+            <Form noValidate onSubmit={handleSubmit} method="POST" data-netlify="true">
               <Form.Group className="mb-3" controlId="validationCustom01">
                 <Form.Label>Name</Form.Label>
                 <Form.Control name="name" required type="text" placeholder="Name" />
