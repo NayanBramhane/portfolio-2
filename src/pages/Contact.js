@@ -25,7 +25,7 @@ const Contact = (event) => {
       <Row>
         <Col>
           <div className="contact-form">
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <Form noValidate validated={validated} onSubmit={handleSubmit} method="POST" data-netlify="true">
               <Form.Group className="mb-3" controlId="validationCustom01">
                 <Form.Label>Name</Form.Label>
                 <Form.Control required type="text" placeholder="Name" />
